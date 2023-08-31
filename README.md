@@ -10,4 +10,6 @@ sort_values
 
 drop_duplicates
 
+string functions
+
 .str.contains (regex)
