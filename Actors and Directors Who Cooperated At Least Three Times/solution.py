@@ -5,4 +5,4 @@ def actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:
     result_df = actor_director.groupby(['actor_id','director_id'])['timestamp'].nunique().reset_index()
 
     # apply the condition of at least three times
-    return result_df[result_df['timestamp']>=3][['actor_id','director_id']]
+    return result_df[result_df['timestamp']>=3][['actor_id', 'director_id']]
