@@ -1,6 +1,8 @@
 import pandas as pd
 
-def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
+def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
+    N=2
+    
     # drop duplicates
     unique_salaries = employee['salary'].drop_duplicates()
     
@@ -9,6 +11,6 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
 
     # check for null condition
     if N > len(sorted_salaries):
-        return pd.DataFrame({ 'getNthHighestSalary('+str(N)+')' : [None] })
+        return pd.DataFrame({ 'SecondHighestSalary' : [None] })
     else:
-        return pd.DataFrame({ 'getNthHighestSalary('+str(N)+')': [sorted_salaries.iloc[N-1]] })
+        return pd.DataFrame({ 'SecondHighestSalary': [sorted_salaries.iloc[N-1]] })
